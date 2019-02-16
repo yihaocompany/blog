@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="layui-form-item">
-            <label class="layui-form-label">缩略图</label>
+            <label class="layui-form-label">缩略图（826*300）</label>
             <div class="layui-input-block">
                 <div class="file-box">
                     <i class="layui-icon">&#xe61f;</i>
@@ -43,6 +43,13 @@
                         <option <if ($info['status']==$key)>selected="selected"</if> value="{$key}">{$vo}</option>
                     </volist>
                 </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">说明（SEO） 300 汉字</label>
+            <div class="layui-input-block">
+                <textarea name="desc"  style='width:70%' placeholder="请输入内容" class="layui-textarea" required lay-verify="required" >{$info.desc|raw}</textarea>
+
             </div>
         </div>
         <div class="layui-form-item">
