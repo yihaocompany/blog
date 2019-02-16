@@ -8,7 +8,6 @@
        <link rel="stylesheet" href="/src/admin/layui/css/layui.css">
        <script src="https://apps.bdimg.com/libs/jquery/1.8.0/jquery.min.js"></script>
        <script src="/src/admin/layui/layui.js"></script>
-       
        <script>
            layui.use('form', function () {
                var form = layui.form();
