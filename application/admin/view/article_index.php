@@ -52,14 +52,12 @@
     layui.use('form', function () {
         var form = layui.form();
         form.on('switch(choice)', function(data){
-
             var id=data.elem.value;
             var homead=0;
             if(data.elem.checked){
                 homead=1;
             }
             var postdata={'id':id,'homead':homead};
-
             $.post("{:url('article/homead')}",postdata,function(res){
                 if(res.status){
                     layer.msg(res.info, {time: 2000});
@@ -68,8 +66,6 @@
                 }
             },'json');
             return false;
-
-
         });
     });
 
