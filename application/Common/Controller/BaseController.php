@@ -17,22 +17,16 @@ class BaseController extends Controller {
 
 
     protected function Configs(){
-        if(!cache('config'))
-        {
+        if(!cache('config')) {
             $items=Db::table('config')->select();
             foreach ($items as $item){
                 if($item['type']=='img'){
-
                     $configs[$item['ckey']]=  "<img src='".$item['cvalue']."'>";
                 }else{
-
                     $configs[$item['ckey']]=  $item['cvalue'];
                 }
-
-
             }
             cache('config',$configs,60*600);
-
         }
 
         $this->assign('configs', cache('config'));

@@ -8,13 +8,11 @@ class BlogBaseController extends BaseController {
     public function __construct() {
         parent::__construct();
         $this->blogHeadNav();
+        $this->links();
     }
 
 //获取博客头部分类
     protected function blogHeadNav() {
-
-
-
         if(!cache('headernav')){
             $category = new \app\admin\model\categoryModel();
             $headernav = $category->getField(['status' => 1], 'id,title', 'sort asc');
@@ -28,6 +26,16 @@ class BlogBaseController extends BaseController {
         $this->assign('headernav',  cache('headernav'));
         $this->assign('backimg', cache('backimg'));
     }
+
+    public  function links(){
+        if(!cache('links')){
+            $linksrecords = new \app\admin\model\linksModel();
+            $links = $linksrecords->getField(['status' => 1], 'id,title,url,description', 'id asc');
+            cache('links',$links);
+        }
+        $this->assign('listlinks',  cache('links'));
+    }
+
 
     public function jump404() {
         //只有在app_debug=False时才会正常显示404页面，否则会有相应的错误警告提示

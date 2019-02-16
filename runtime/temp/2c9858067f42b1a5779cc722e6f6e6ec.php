@@ -1,5 +1,6 @@
+<?php /*a:2:{s:54:"D:\wwwroot\blog\application\admin\view\public_head.php";i:1550302056;s:56:"D:\wwwroot\blog\application\admin\view\article_index.php";i:1550263446;}*/ ?>
 <div class="aright">
-    <div class="arz" style="float: left;margin: 0px 20px 20px 30px;"><a href="{:url('article/edit')}"><i class="layui-icon">&#xe608;</i>添加文章</a></div>
+    <div class="arz" style="float: left;margin: 0px 20px 20px 30px;"><a href="<?php echo url('article/edit'); ?>"><i class="layui-icon">&#xe608;</i>添加文章</a></div>
 
     <div style="float: left;">
         <form class="layui-form" action="" method="get">
@@ -22,29 +23,29 @@
                 <th width="10%" align="center">添加时间</th>
                 <th width="5%" align="center">基本操作</th>
             </tr>
-            <volist name="list" id="vo">
+            <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
                 <tr>
-                    <td align="center">{$vo.id}</td>
-                    <td align="left"><a target="_blank" href="/info/{$vo.id}/">{$vo.title}</a></td>
-                    <td align="center"><img src='{$vo.img|default=""}' height="50"></td>
-                    <td align="center">{$type[$vo['type']]}</td>
+                    <td align="center"><?php echo htmlentities($vo['id']); ?></td>
+                    <td align="left"><a target="_blank" href="/info/<?php echo htmlentities($vo['id']); ?>/"><?php echo htmlentities($vo['title']); ?></a></td>
+                    <td align="center"><img src='<?php echo htmlentities((isset($vo['img']) && ($vo['img'] !== '')?$vo['img']:"")); ?>' height="50"></td>
+                    <td align="center"><?php echo htmlentities($type[$vo['type']]); ?></td>
                     <td align="center">
-                        <input type="checkbox" lay-skin="switch"  lay-filter="choice" value="{$vo.id}"    <if($vo.homead==1)>
+                        <input type="checkbox" lay-skin="switch"  lay-filter="choice" value="<?php echo htmlentities($vo['id']); ?>"    <?php if(($vo['homead']==1)): ?>
                         checked
-                        </if> >
+                        <?php endif; ?> >
                     </td>
-                    <td align="center">{$notes['status'][$vo['status']]}</td>
-                    <td align="center">{$vo.c_time}</td>
+                    <td align="center"><?php echo htmlentities($notes['status'][$vo['status']]); ?></td>
+                    <td align="center"><?php echo htmlentities($vo['c_time']); ?></td>
                     <td align="center">
-                        <a href="{:url('article/edit',['id'=>$vo['id']])}" class="layui-btn layui-btn-small">修改</a>
+                        <a href="<?php echo url('article/edit',['id'=>$vo['id']]); ?>" class="layui-btn layui-btn-small">修改</a>
                     </td>
                 </tr>
-            </volist>
+            <?php endforeach; endif; else: echo "" ;endif; ?>
         </table>
 
     </form>
     <div class="pages">
-        {$pages|raw}
+        <?php echo $pages; ?>
     </div>
 </div>
 <script>
@@ -60,9 +61,11 @@
             }
             var postdata={'id':id,'homead':homead};
 
-            $.post("{:url('article/homead')}",postdata,function(res){
+            $.post("<?php echo url('article/homead'); ?>",postdata,function(res){
+
                 if(res.status){
                     layer.msg(res.info, {time: 2000});
+
                 }else{
                     layer.msg(res.info, {time: 2000});
                 }

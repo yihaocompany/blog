@@ -1,4 +1,4 @@
-<?php /*a:1:{s:54:"D:\wwwroot\blog\application\index\view\public_foot.php";i:1550292800;}*/ ?>
+<?php /*a:3:{s:54:"D:\wwwroot\blog\application\index\view\public_head.php";i:1550296715;s:54:"D:\wwwroot\blog\application\index\view\index_index.php";i:1550087595;s:54:"D:\wwwroot\blog\application\index\view\public_foot.php";i:1550304906;}*/ ?>
 <div class='actGotop'>
     <a href='javascript:void(0);'><img src='/src/blog/image/top.png' /></a>
 </div>
@@ -6,10 +6,14 @@
     <div class="about">
         <div class="right">
             <ul id="menu-bottom-nav" class="menu">
-               <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">友链1</a></li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">友链1</a></li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">友链1</a></li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">友链1</a></li>
+
+                <?php foreach ($listlinks as $item) {?>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                        <a href="<?php echo $item['url']?>" target="_blank" title="<?php echo $item['description']?>">
+                            <?php echo $item['title']?>
+                        </a
+                    </li>
+                <?php }?>
             </ul>
             <p class="banquan">
                <?php echo htmlentities($configs['webname']); ?>

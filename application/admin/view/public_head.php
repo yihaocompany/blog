@@ -25,7 +25,7 @@
                     <li><i class="layui-icon">&#xe63c;</i><a href="{:url('Article/index')}">文章管理</a></li>
                     <li><i class="layui-icon">&#xe63c;</i><a href="{:url('Category/index')}">栏目管理</a></li>
                     <li><i class="layui-icon">&#xe63c;</i><a href="{:url('Background/index')}">背景图管理</a></li>
-                    <li><i class="layui-icon">&#xe63c;</i><a href="{:url('Friends/index')}">友情链接</a></li>
+                    <li><i class="layui-icon">&#xe63c;</i><a href="{:url('Links/index')}">友情链接</a></li>
                     <li><i class="layui-icon">&#xe63c;</i><a href="{:url('Configs/index')}">配置管理</a></li>
                 </ul>
             </div>

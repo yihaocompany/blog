@@ -5,10 +5,14 @@
     <div class="about">
         <div class="right">
             <ul id="menu-bottom-nav" class="menu">
-               <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">友链1</a></li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">友链1</a></li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">友链1</a></li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">友链1</a></li>
+
+                <?php foreach ($listlinks as $item) {?>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                        <a href="<?php echo $item['url']?>" target="_blank" title="<?php echo $item['description']?>">
+                            <?php echo $item['title']?>
+                        </a
+                    </li>
+                <?php }?>
             </ul>
             <p class="banquan">
                {$configs.webname}
