@@ -1,4 +1,4 @@
-<?php /*a:2:{s:54:"D:\wwwroot\blog\application\admin\view\public_head.php";i:1550302056;s:53:"D:\wwwroot\blog\application\admin\view\admin_edit.php";i:1550297275;}*/ ?>
+<?php /*a:2:{s:54:"D:\wwwroot\blog\application\admin\view\public_head.php";i:1550302056;s:53:"D:\wwwroot\blog\application\admin\view\admin_edit.php";i:1550306388;}*/ ?>
 <link rel="stylesheet" href="/src/admin/wangEditor/css/wangEditor.min.css">
 <script type="text/javascript" src="/src/admin/wangEditor/js/wangEditor.min.js"></script>
 <div class="aright">
@@ -9,7 +9,7 @@
         <div class="layui-form-item">
             <label class="layui-form-label">用户名</label>
             <div class="layui-input-block">
-                <input type="text" name="title" required lay-verify="required" value="<?php echo htmlentities($info['username']); ?>" placeholder="必填内容" autocomplete="off" class="layui-input"  <?php if($info['username']=='admin'){ echo "disabled";}?>>
+                <input type="text" name="username" required lay-verify="required" value="<?php echo htmlentities($info['username']); ?>" placeholder="必填内容" autocomplete="off" class="layui-input"  <?php if($info['username']=='admin'){ echo "disabled";}?>>
             </div>
         </div>
         <div class="layui-form-item">

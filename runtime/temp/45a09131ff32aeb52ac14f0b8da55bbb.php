@@ -1,4 +1,4 @@
-<?php /*a:2:{s:54:"D:\wwwroot\blog\application\admin\view\public_head.php";i:1550295724;s:59:"D:\wwwroot\blog\application\admin\view\background_index.php";i:1550287776;}*/ ?>
+<?php /*a:2:{s:54:"D:\wwwroot\blog\application\admin\view\public_head.php";i:1550302056;s:59:"D:\wwwroot\blog\application\admin\view\background_index.php";i:1550287776;}*/ ?>
 <div class="aright">
     <div class="arz" style="float: left;margin: 0px 20px 20px 30px;"><a href="javscript:;"><i class="layui-icon">&#xe608;</i></a></div>
 

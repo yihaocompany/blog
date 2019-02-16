@@ -1,4 +1,4 @@
-<?php /*a:2:{s:54:"D:\wwwroot\blog\application\admin\view\public_head.php";i:1550302056;s:56:"D:\wwwroot\blog\application\admin\view\article_index.php";i:1550263446;}*/ ?>
+<?php /*a:2:{s:54:"D:\wwwroot\blog\application\admin\view\public_head.php";i:1550302056;s:56:"D:\wwwroot\blog\application\admin\view\article_index.php";i:1550306221;}*/ ?>
 <div class="aright">
     <div class="arz" style="float: left;margin: 0px 20px 20px 30px;"><a href="<?php echo url('article/edit'); ?>"><i class="layui-icon">&#xe608;</i>添加文章</a></div>
 
@@ -53,26 +53,20 @@
     layui.use('form', function () {
         var form = layui.form();
         form.on('switch(choice)', function(data){
-
             var id=data.elem.value;
             var homead=0;
             if(data.elem.checked){
                 homead=1;
             }
             var postdata={'id':id,'homead':homead};
-
             $.post("<?php echo url('article/homead'); ?>",postdata,function(res){
-
                 if(res.status){
                     layer.msg(res.info, {time: 2000});
-
                 }else{
                     layer.msg(res.info, {time: 2000});
                 }
             },'json');
             return false;
-
-
         });
     });
 

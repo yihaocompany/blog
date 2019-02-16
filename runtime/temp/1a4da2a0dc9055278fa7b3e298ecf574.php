@@ -1,4 +1,4 @@
-<?php /*a:2:{s:54:"D:\wwwroot\blog\application\admin\view\public_head.php";i:1550295724;s:57:"D:\wwwroot\blog\application\admin\view\category_index.php";i:1549998656;}*/ ?>
+<?php /*a:2:{s:54:"D:\wwwroot\blog\application\admin\view\public_head.php";i:1550302056;s:57:"D:\wwwroot\blog\application\admin\view\category_index.php";i:1549998656;}*/ ?>
 <div class="aright">
     <div class="arz" style="float: left;margin: 0px 20px 20px 30px;"><a href="<?php echo url('category/edit'); ?>"><i class="layui-icon">&#xe608;</i>添加栏目</a></div>
 

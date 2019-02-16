@@ -75,8 +75,6 @@ class Admin extends AdminBaseController {
                 $x = $this->mod->Dosave($data, $where);
             } else { //添加数据
 
-
-
                 $data['create_at'] =strtotime('now');
                 $x = $this->mod->Doadd($data);
             }
@@ -84,8 +82,6 @@ class Admin extends AdminBaseController {
                 $this->error('操作失败');
                 exit;
             }
-
-
 
             $x and $this->success('操作成功', CONTROLLER_NAME . '/index', NULL, 1) or $this->error('操作失败');
         } else {

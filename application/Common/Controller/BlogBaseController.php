@@ -8,24 +8,32 @@ class BlogBaseController extends BaseController {
     public function __construct() {
         parent::__construct();
         $this->blogHeadNav();
+        $this->blogimg();
         $this->links();
     }
 
-//获取博客头部分类
+//获取博客头部分类 、写到缓存
     protected function blogHeadNav() {
         if(!cache('headernav')){
             $category = new \app\admin\model\categoryModel();
             $headernav = $category->getField(['status' => 1], 'id,title', 'sort asc');
             cache('headernav',$headernav,60*600);
         }
+
+        $this->assign('headernav',  cache('headernav'));
+
+    }
+//获取图片配置 、写到缓存
+    public  function blogimg(){
         if(!cache('backimg')){
             $background = new \app\admin\model\backgroundModel();
             $backimg = $background->getOne(1);
             cache('backimg',$backimg,60*600);
         }
-        $this->assign('headernav',  cache('headernav'));
         $this->assign('backimg', cache('backimg'));
     }
+
+//获取友情链接、写到缓存
 
     public  function links(){
         if(!cache('links')){
