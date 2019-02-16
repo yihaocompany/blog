@@ -1,4 +1,4 @@
-## Wolf Blog 博客源码开源共享
+## yihao Blog 博客源码开源共享
 
 + [作者博客地址](http://diao.info) 
 欢迎加入群交流：515786911 
