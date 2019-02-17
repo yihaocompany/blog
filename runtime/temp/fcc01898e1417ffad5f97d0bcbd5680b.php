@@ -1,4 +1,4 @@
-<?php /*a:3:{s:54:"D:\wwwroot\blog\application\index\view\public_head.php";i:1550296715;s:53:"D:\wwwroot\blog\application\index\view\info_index.php";i:1549998651;s:55:"D:\wwwroot\blog\application\index\view\public_aside.php";i:1550292744;}*/ ?>
+<?php /*a:3:{s:54:"D:\wwwroot\blog\application\index\view\public_head.php";i:1550406464;s:53:"D:\wwwroot\blog\application\index\view\info_index.php";i:1549998651;s:55:"D:\wwwroot\blog\application\index\view\public_aside.php";i:1550292744;}*/ ?>
 <div id="main">
     <div id="soutab">
     </div>

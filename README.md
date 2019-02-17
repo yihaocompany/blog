@@ -33,3 +33,7 @@
 ```
 ## 安装验证模块
     composer require topthink/think-captcha
+    
+## 分词功能加入
+    http://www.xunsearch.com/
+## 修改了菜单路由及404

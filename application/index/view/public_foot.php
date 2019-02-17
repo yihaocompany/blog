@@ -31,7 +31,7 @@
 
         技术支持:{$configs.tec}
         &nbsp;&nbsp;&nbsp;
-        <a href="http://www.thinkphp.cn/" target="_blank" rel="nofollow">基于 Thinkphp<?php echo think\App::VERSION; ?></a>
+        <a href="http://www.thinkphp.cn/" target="_blank" rel="nofollow">基于Thinkphp{$Think.VERSION}</a>
         <div class="tongji">
             <!-- 添加站长统计代码 -->
         </div>

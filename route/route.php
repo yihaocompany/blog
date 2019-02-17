@@ -10,6 +10,8 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 Route::rule('info/:id', 'index/Info/index', 'GET');
+/*Route::rule('type/:type/page/:page','index/index/index','GET');
+*/
 
 return [
 ];

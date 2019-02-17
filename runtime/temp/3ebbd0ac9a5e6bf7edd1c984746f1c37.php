@@ -1,4 +1,4 @@
-<?php /*a:3:{s:54:"D:\wwwroot\blog\application\index\view\public_head.php";i:1550296715;s:54:"D:\wwwroot\blog\application\index\view\index_index.php";i:1550087595;s:54:"D:\wwwroot\blog\application\index\view\public_foot.php";i:1550304906;}*/ ?>
+<?php /*a:2:{s:54:"D:\wwwroot\blog\application\index\view\index_index.php";i:1550087595;s:54:"D:\wwwroot\blog\application\index\view\public_foot.php";i:1550406852;}*/ ?>
 <div class='actGotop'>
     <a href='javascript:void(0);'><img src='/src/blog/image/top.png' /></a>
 </div>
@@ -32,7 +32,7 @@
 
         技术支持:<?php echo htmlentities($configs['tec']); ?>
         &nbsp;&nbsp;&nbsp;
-        <a href="http://www.thinkphp.cn/" target="_blank" rel="nofollow">基于 Thinkphp<?php echo think\App::VERSION; ?></a>
+        <a href="http://www.thinkphp.cn/" target="_blank" rel="nofollow">基于Thinkphp<?php echo htmlentities(app()->version()); ?></a>
         <div class="tongji">
             <!-- 添加站长统计代码 -->
         </div>

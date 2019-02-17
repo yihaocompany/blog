@@ -1,4 +1,4 @@
-<?php /*a:1:{s:57:"D:\wwwroot\blog.com\application\index/view/public_404.php";i:1549998650;}*/ ?>
+<?php /*a:1:{s:53:"D:\wwwroot\blog\application\index/view/public_404.php";i:1549998650;}*/ ?>
 <!DOCTYPE html>
 <html>
     <head>

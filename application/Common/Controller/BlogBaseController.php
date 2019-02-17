@@ -47,6 +47,7 @@ class BlogBaseController extends BaseController {
 
     public function jump404() {
         //只有在app_debug=False时才会正常显示404页面，否则会有相应的错误警告提示
+
         abort(404, '页面异常');
     }
 
