@@ -1,4 +1,4 @@
-<?php /*a:2:{s:54:"D:\wwwroot\blog\application\index\view\index_index.php";i:1550087595;s:55:"D:\wwwroot\blog\application\index\view\public_aside.php";i:1550292744;}*/ ?>
+<?php /*a:3:{s:54:"D:\wwwroot\blog\application\index\view\public_head.php";i:1550416295;s:54:"D:\wwwroot\blog\application\index\view\index_index.php";i:1550418171;s:55:"D:\wwwroot\blog\application\index\view\public_aside.php";i:1550292744;}*/ ?>
 <link type="text/css" href="/src/blog/css/jcarousel.css?v=1.08" rel="stylesheet" />
 <script type="text/javascript" src="/src/blog/js/jquery.jcarousel.min.js"></script>
 <script type="text/javascript" src="/src/blog/js/jquery.pikachoose.min.js"></script>
@@ -28,7 +28,7 @@
                 <?php if ($vo['img']): ?>
                     <span class="titleimg">
                         <a href="/info/<?php echo htmlentities($vo['id']); ?>/">
-                            <img width="270" height="165" src="/src/blog/image/default.png" data-original="<?php echo htmlentities((isset($vo['img']) && ($vo['img'] !== '')?$vo['img']:'/src/blog/image/default.png')); ?>" class="attachment-thumbnail wp-post-image" />
+                            <img width="270" height="120" src="/src/blog/image/default.png" data-original="<?php echo htmlentities((isset($vo['img']) && ($vo['img'] !== '')?$vo['img']:'/src/blog/image/default.png')); ?>" class="attachment-thumbnail wp-post-image" />
                         </a>
                     </span>
                 <?php endif; ?>

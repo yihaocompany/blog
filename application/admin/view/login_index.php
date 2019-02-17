@@ -46,13 +46,10 @@
                         $('#password').focus();
                         return;
                     }
-
                     if (!verify) {
                         $('#verify').focus();
                         return;
                     }
-
-
                     $.ajax({
                         url: '{:url("login/login")}',
                         type: "post",
@@ -70,12 +67,17 @@
                                 refreshVerify();
                                 return;
                             } else {
-                                window.location.href = '{:url("index/index")}';
+                                layer.msg('登陆成功!', {icon: 6, time: 1500},function () {
+                                    window.location.href = '{:url("index/index")}';
+                                });
+
                             }
                         }
                     });
                 });
             });
+
+
 
             function refreshVerify() {
                 var ts = Date.parse(new Date())/1000;

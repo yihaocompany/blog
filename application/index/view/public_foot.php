@@ -5,7 +5,6 @@
     <div class="about">
         <div class="right">
             <ul id="menu-bottom-nav" class="menu">
-
                 <?php foreach ($listlinks as $item) {?>
                     <li class="menu-item menu-item-type-post_type menu-item-object-page">
                         <a href="<?php echo $item['url']?>" target="_blank" title="<?php echo $item['description']?>">
@@ -26,9 +25,7 @@
     <!--about-->
     <div class="bottom">
         <a href="javascript:;" target="_blank">Copyright &copy; <?php echo date('Y'); ?></a>
-        &nbsp;&nbsp;&nbsp;
         <a href="http://www.miibeian.gov.cn/" target="_blank" rel="nofollow">{$configs.ipc}</a>
-
         技术支持:{$configs.tec}
         &nbsp;&nbsp;&nbsp;
         <a href="http://www.thinkphp.cn/" target="_blank" rel="nofollow">基于Thinkphp{$Think.VERSION}</a>

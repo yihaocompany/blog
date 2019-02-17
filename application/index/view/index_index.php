@@ -28,7 +28,7 @@
                 <?php if ($vo['img']): ?>
                     <span class="titleimg">
                         <a href="/info/{$vo.id}/">
-                            <img width="270" height="165" src="/src/blog/image/default.png" data-original="{$vo.img|default='/src/blog/image/default.png'}" class="attachment-thumbnail wp-post-image" />
+                            <img width="270" height="120" src="/src/blog/image/default.png" data-original="{$vo.img|default='/src/blog/image/default.png'}" class="attachment-thumbnail wp-post-image" />
                         </a>
                     </span>
                 <?php endif; ?>
