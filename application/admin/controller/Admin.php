@@ -66,8 +66,10 @@ class Admin extends AdminBaseController {
                 $this->error('密码长度需为8位');
                 exit;
             }
+
             $data['username']=trim( $data['username']);
-            $data['password']=md5(trim( $data['username']));
+            $data['password']=md5(trim( $data['password']));
+
             try {
             if ($id) { //更新数据u
                 $where['id'] = $id;

@@ -12,7 +12,28 @@ class Login extends AdminBaseController {
 
     }
 
+
+    public function verify()
+    {
+        $config =    [
+            // 验证码字体大小
+            'fontSize'    =>    15,
+            // 验证码位数
+            'length'      =>    3,
+            // 关闭验证码杂点
+            'useNoise'    =>    false,
+            'codeSet'  => '2345678abcdefhijkmnpqrstuvwxyzABCDEFGHJKLMNPQRTUVWXY',
+            'reset'    => false
+        ];
+
+
+        $captcha = new \think\captcha\Captcha($config);
+        return $captcha->entry();
+    }
+
+
     public function index() {
+
         return $this->fetch();
     }
 
@@ -20,6 +41,15 @@ class Login extends AdminBaseController {
         if (IS_POST) {
             $username = trim(input('post.username'));
             $password = trim(input('post.password'));
+
+            $verify = trim(input('post.verify'));
+
+            if(!captcha_check($verify)){
+                $ret = ['code' => 0, 'msg' => '验证码错误'];
+                return json($ret);
+
+            }
+
             if(strlen($username)<4 and strlen($username) ){
                 $ret = ['code' => 0, 'msg' => '用户名4到8位'];
                 return json($ret);

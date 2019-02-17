@@ -31,6 +31,9 @@
        </script>
 
 ```
+## 安装验证模块
+    composer require topthink/think-captcha
+
 
 
 
