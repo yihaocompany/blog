@@ -16,6 +16,7 @@
                 </div>
             </header>
             <div class="content-text">
+                <img src="{$info.img}">
                 {$info.content|raw}
             </div>
             <!--content_text-->
