@@ -1,7 +1,7 @@
 ## yihao Blog 博客源码开源共享
 
-+ [作者博客地址](http://diao.info) 
-欢迎加入群交流：515786911 
++ [作者博客地址](http://diao.info)
+欢迎加入群交流：515786911
 使用源码后请在您的网站地址链接或说明来源【可选】
 ## layui 中的form使用
 ```
@@ -33,8 +33,3 @@
 ```
 ## 安装验证模块
     composer require topthink/think-captcha
-
-
-
-
-
