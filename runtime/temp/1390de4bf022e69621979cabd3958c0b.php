@@ -1,4 +1,4 @@
-<?php /*a:1:{s:54:"D:\wwwroot\blog\application\admin\view\login_index.php";i:1550364116;}*/ ?>
+<?php /*a:1:{s:54:"D:\wwwroot\blog\application\admin\view\login_index.php";i:1550419574;}*/ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -47,13 +47,10 @@
                         $('#password').focus();
                         return;
                     }
-
                     if (!verify) {
                         $('#verify').focus();
                         return;
                     }
-
-
                     $.ajax({
                         url: '<?php echo url("login/login"); ?>',
                         type: "post",
@@ -71,12 +68,17 @@
                                 refreshVerify();
                                 return;
                             } else {
-                                window.location.href = '<?php echo url("index/index"); ?>';
+                                layer.msg('登陆成功!', {icon: 6, time: 1500},function () {
+                                    window.location.href = '<?php echo url("index/index"); ?>';
+                                });
+
                             }
                         }
                     });
                 });
             });
+
+
 
             function refreshVerify() {
                 var ts = Date.parse(new Date())/1000;

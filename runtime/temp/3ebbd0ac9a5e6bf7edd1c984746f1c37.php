@@ -1,4 +1,4 @@
-<?php /*a:2:{s:54:"D:\wwwroot\blog\application\index\view\index_index.php";i:1550087595;s:54:"D:\wwwroot\blog\application\index\view\public_foot.php";i:1550406852;}*/ ?>
+<?php /*a:1:{s:54:"D:\wwwroot\blog\application\index\view\public_foot.php";i:1550418131;}*/ ?>
 <div class='actGotop'>
     <a href='javascript:void(0);'><img src='/src/blog/image/top.png' /></a>
 </div>
@@ -6,7 +6,6 @@
     <div class="about">
         <div class="right">
             <ul id="menu-bottom-nav" class="menu">
-
                 <?php foreach ($listlinks as $item) {?>
                     <li class="menu-item menu-item-type-post_type menu-item-object-page">
                         <a href="<?php echo $item['url']?>" target="_blank" title="<?php echo $item['description']?>">
@@ -27,9 +26,7 @@
     <!--about-->
     <div class="bottom">
         <a href="javascript:;" target="_blank">Copyright &copy; <?php echo date('Y'); ?></a>
-        &nbsp;&nbsp;&nbsp;
         <a href="http://www.miibeian.gov.cn/" target="_blank" rel="nofollow"><?php echo htmlentities($configs['ipc']); ?></a>
-
         技术支持:<?php echo htmlentities($configs['tec']); ?>
         &nbsp;&nbsp;&nbsp;
         <a href="http://www.thinkphp.cn/" target="_blank" rel="nofollow">基于Thinkphp<?php echo htmlentities(app()->version()); ?></a>
