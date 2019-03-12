@@ -38,10 +38,7 @@ class Article extends AdminBaseController {
     public function homead(){
         $id = input('id');
         if (IS_POST){
-
             $data['homead'] = input('homead');
-
-
             $where['id'] = $id;
             if($this->mod->Dosave($data, $where)){
                 $rdata=array('status'=>1,'info'=>'修改首页图片标志成功');
@@ -78,12 +75,8 @@ class Article extends AdminBaseController {
                 }
             }
 
-
-
             if ($id) { //更新数据
                 $where['id'] = $id;
-
-
                 $x = $this->mod->Dosave($data, $where);
             } else { //添加数据
                 $data['c_time'] = date('Y-m-d H:i:s');
@@ -104,7 +97,7 @@ class Article extends AdminBaseController {
             $img_info = $file->move($file_path);
             if ($img_info) {
                 $img = $img_path . $img_info->getSaveName();
-                $ret = ["errno" => 0, 'data' => [$img]];
+                $ret = ["errno" => 0, 'data' => $img];
                 return json($ret);
             } else {
                 $this->error($file->getError());

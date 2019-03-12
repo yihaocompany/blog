@@ -55,7 +55,7 @@
         <div class="layui-form-item">
             <label class="layui-form-label">文章内容</label>
             <div class="layui-input-block">
-                <div id="textarea" style='width:70%;height:550px;'>
+                <div id="textarea" style='width:70%;height:350px;'>
                     <p>{$info.content|raw}</p>
                 </div>
                 <textarea id="text1" style="display: none;" name="content"></textarea>

@@ -61,7 +61,7 @@
                             verify:   verify
                         },
                         success: function (msg) {
-                            console.log(msg);
+                            //console.log(msg);
                             if (msg.code != '1') {
                                 layer.msg(msg.msg);
                                 refreshVerify();
@@ -76,9 +76,6 @@
                     });
                 });
             });
-
-
-
             function refreshVerify() {
                 var ts = Date.parse(new Date())/1000;
                 var img = document.getElementById('verify_img');
