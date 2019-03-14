@@ -16,7 +16,9 @@
                 </div>
             </header>
             <div class="content-text">
+                <?php if($info['img']!=''){?>
                 <img src="{$info.img}">
+              <?php }?>
                 {$info.content|raw}
             </div>
             <!--content_text-->
